@@ -6,16 +6,16 @@
 
 buildGoModule (finalAttrs: {
   pname = "unpackerr";
-  version = "0.14.5";
+  version = "0.15.2";
 
   src = fetchFromGitHub {
-    owner = "davidnewhall";
+    owner = "Unpackerr";
     repo = "unpackerr";
     rev = "v${finalAttrs.version}";
-    sha256 = "sha256-uQwpdgV6ksouW9JTuiiuQjxBGOE/ypDW769kNJgWrHw=";
+    hash = "sha256-npq0CXsaWaFa6RazQXRKVaqTyK87VhzaF/hd/d952Po=";
   };
 
-  vendorHash = "sha256-wWIw0gNn5tqRq0udzPy/n2OkiIVESpSotOSn2YlBNS4=";
+  vendorHash = "sha256-v0ml1dTIhf79mhlyTrPNhIfg1Yhao27eP0pnI95OvaU=";
 
   ldflags = [
     "-s"
@@ -26,7 +26,7 @@ buildGoModule (finalAttrs: {
   meta = {
     description = "Extracts downloads for Radarr, Sonarr, Lidarr - Deletes extracted files after import";
     homepage = "https://github.com/davidnewhall/unpackerr";
-    maintainers = [ ];
+    maintainers = with lib.maintainers; [ nukdokplex ];
     license = lib.licenses.mit;
     mainProgram = "unpackerr";
   };
